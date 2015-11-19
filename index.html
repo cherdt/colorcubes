@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Color Cubes - a Javascript Game - Google's Color Junction</title>
+<link rel="stylesheet" href="styles.css" />
+<script type="text/javascript" src="color.js"></script>
+<script type="text/javascript" src="position.js"></script>
+<script type="text/javascript" src="piece.js"></script>
+<script type="text/javascript" src="set.js"></script>
+<script type="text/javascript" src="board.js"></script>
+</head>
+<body>
+
+<h1><img src="color-cubes.png" /></h1>
+<p>This is an implementation of <a href="http://www.google.com/ig/directory?url=www.google.com/ig/modules/colorjunction.xml">Google's Color Junction</a> game.</p>
+
+<div id="player1">
+<div id="game">
+
+</div>
+
+<h2>Status:</h2>
+<ul class="score">
+	<li id="pieces" class="pieces"></li>
+	<li id="moves" class="moves"></li>
+	<li id="status" class="status"></li>
+</ul>
+
+<!-- In the future, there will be a computer player playing against you -->
+<!--
+<div id="player2">
+	<div id="computergame"></div>
+	<div id="computerpieces"></div>
+	<div id="computermoves"></div>	
+	<div id="computerstatus">...</div>
+</div>
+-->
+
+<!--<div id="trace"></div>-->
+
+
+<hr />
+
+<p>Comments? Questions? Contact chris @ osric . com. See other <a href="/games/">games I made</a></p>
+
+<p>To-dos (for some other day):</p>
+<ul>
+    <li>Build alternate version for red-green colorblind users, or just people who can't stand nuclear green</li>
+    <li>Build a computer player (or players) to compete side-by-side against the human</li>
+    <li>Analyze puzzles for optimal solution--or see if such analysis is feasible (presumably involves backtracking)</li>
+</ul>
+
+<script type="text/javascript">
+	function trace(str) {
+		if ( document.getElementById("trace") )
+			document.getElementById("trace").innerHTML = str + "<br />" +document.getElementById("trace").innerHTML ;
+	}
+
+	board = new Board();
+	board.draw();
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19082249-1', 'osric.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
